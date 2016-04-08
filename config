@@ -29,6 +29,9 @@ font pango:DejaVu Sans Mono 8
 #SET BACKGROUNG
 exec --no-startup-id feh --bg-scale /home/acioran/Pictures/vim_background.png
 
+#KEYBOARD REMAP
+exec --no-startup-id "sleep 1; xmodmap /home/acioran/.i3/.Xmodmap"
+
 #ENABLE COMPTON
 #exec --no-startup-id compton --config /home/acioran/.i3/compton.conf -b
 
@@ -164,8 +167,10 @@ bar {
         status_command i3status -c ~/.i3/i3status.conf
 }
 
+# calendar
+bindsym $mod+c exec zenity --calendar
 # lock screen
-bindsym $mod+c exec i3lock
+bindsym $mod+x exec i3lock
 
 # volume control
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
@@ -179,7 +184,7 @@ bindsym $mod+comma exec rhythmbox-client --previous
 #Mail
 bindsym XF86Mail exec /home/acioran/Downloads/thunderbird/thunderbird
 
-#Keepass - TODO
+#Keepass 
 bindsym $mod+a exec /usr/bin/keepass2 --auto-type
 
 #Move workspaces
