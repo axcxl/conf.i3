@@ -79,10 +79,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
-#bindsym $mod+minus split h
+bindsym $mod+backslash split h
 
 # split in vertical orientation
-#bindsym $mod+v split v
+bindsym $mod+minus split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -99,7 +99,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+space focus mode_toggle
 
 # focus the parent container
-#bindsym $mod+a focus parent
+bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
@@ -167,10 +167,10 @@ bar {
         status_command i3status -c ~/.i3/i3status.conf
 }
 
-# calendar
-bindsym $mod+c exec zenity --calendar
-# lock screen
-bindsym $mod+x exec i3lock
+# calendar CTRL+ALT+c
+bindsym control+mod1+c exec zenity --calendar
+# lock screen - CTRL+ALT+l
+bindsym control+mod1+l exec i3lock
 
 # volume control
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
@@ -185,7 +185,7 @@ bindsym $mod+comma exec rhythmbox-client --previous
 bindsym XF86Mail exec /home/acioran/Downloads/thunderbird/thunderbird
 
 #Keepass 
-bindsym $mod+a exec /usr/bin/keepass2 --auto-type
+bindsym control+mod1+a exec /usr/bin/keepass2 --auto-type
 
 #Move workspaces
 bindsym $mod+Control+Left move workspace to output left
