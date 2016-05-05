@@ -1,5 +1,7 @@
 !Kensington expert mouse buttons:
-pointer = 3 2 1 4 5 6 7 8 9 10 11 12
+!Reversed left and right click
+!pointer = 3 2 1 4 5 6 7 8 9 10 11 12
+pointer = 1 2 3 4 5 6 7 8 9 10 11 12
 
 keycode   8 =
 keycode   9 = Escape NoSymbol Escape
@@ -33,6 +35,10 @@ keycode  38 = a A Left A
 keycode  39 = s S Down S
 keycode  40 = d D Right D
 
+!Swap Control keys
+keycode 105 = Control_L NoSymbol Control_L
+keycode 37 = Control_R NoSymbol Control_R
+
 keycode  28 = t T t T
 keycode  29 = y Y y Y
 keycode  30 = u U u U
@@ -42,7 +48,6 @@ keycode  33 = p P p P
 keycode  34 = bracketleft braceleft bracketleft braceleft
 keycode  35 = bracketright braceright bracketright braceright
 keycode  36 = Return NoSymbol Return
-keycode  37 = Control_L NoSymbol Control_L
 keycode  42 = g G g G
 keycode  43 = h H h H
 keycode  44 = j J j J
@@ -107,7 +112,6 @@ keycode 101 = Hiragana_Katakana NoSymbol Hiragana_Katakana
 keycode 102 = Muhenkan NoSymbol Muhenkan
 keycode 103 =
 keycode 104 = KP_Enter NoSymbol KP_Enter
-keycode 105 = Control_R NoSymbol Control_R
 keycode 106 = KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide KP_Divide XF86Ungrab
 keycode 107 = Print Sys_Req Print Sys_Req
 keycode 108 = Alt_R Meta_R Alt_R Meta_R
