@@ -173,6 +173,8 @@ bindsym control+mod1+c exec zenity --calendar
 bindsym control+mod1+l exec i3lock
 
 # volume control
+bindsym control+plus exec amixer -D pulse sset Master 5%+
+bindsym control+minus exec amixer -D pulse sset Master 5%-
 bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
 
