@@ -172,11 +172,17 @@ bindsym control+mod1+c exec zenity --calendar
 # lock screen - CTRL+ALT+l
 bindsym control+mod1+l exec i3lock
 
+#Remap CTRL-C CTRL-V
+bindsym --release control+comma exec --no-startup-id xdotool key --clearmodifiers ctrl+c
+bindsym --release control+period exec --no-startup-id xdotool key --clearmodifiers ctrl+v
+
 # volume control
 bindsym control+plus exec amixer -D pulse sset Master 5%+
 bindsym control+minus exec amixer -D pulse sset Master 5%-
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
+#bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+
+#bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%-
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume alsa_output.usb-FiiO_FiiO_USB_DAC-E17-01-DACE17.analog-stereo +5% 
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume alsa_output.usb-FiiO_FiiO_USB_DAC-E17-01-DACE17.analog-stereo -- -5% 
 
 # song control :D
 bindsym XF86AudioMute exec rhythmbox-client --play-pause
@@ -184,7 +190,7 @@ bindsym $mod+period exec rhythmbox-client --next
 bindsym $mod+comma exec rhythmbox-client --previous
 
 #Mail
-bindsym XF86Mail exec /home/acioran/Downloads/thunderbird/thunderbird
+bindsym XF86Mail workspace 4
 
 #Keepass 
 bindsym control+mod1+a exec /usr/bin/keepass2 --auto-type
@@ -192,3 +198,6 @@ bindsym control+mod1+a exec /usr/bin/keepass2 --auto-type
 #Move workspaces
 bindsym $mod+Control+Left move workspace to output left
 bindsym $mod+Control+Right move workspace to output right
+
+#Grab screenshot
+bindsym Print exec scrot -e 'mv $f /home/acioran/Pictures/Screenshots'
