@@ -30,7 +30,7 @@ font pango:DejaVu Sans Mono 8
 exec --no-startup-id feh --bg-scale ~/Pictures/brain.jpg
 
 #KEYBOARD REMAP
-exec --no-startup-id "sleep 1; xmodmap ~/.i3/.Xmodmap"
+exec --no-startup-id "sleep 1; xmodmap ~/.config/i3/.Xmodmap"
 
 #ENABLE COMPTON
 #exec --no-startup-id compton --config ~/.i3/compton.conf -b
@@ -165,7 +165,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         #status_command i3status -c ~/.i3/i3status.conf
-        status_command ~/.i3/i3status_extra.sh
+        status_command ~/.config/i3/i3status_extra.sh
 }
 
 # calendar CTRL+ALT+c
